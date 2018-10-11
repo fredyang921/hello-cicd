@@ -6,7 +6,8 @@ jobs:
       - image: circleci/node:8.11.4 # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
+      - run: npm install
+      - run: npm test
 
 
 machine: # 虛擬機的環境
